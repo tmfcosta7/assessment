@@ -10,7 +10,7 @@ import React from 'react';
  */
 export default function Bus(
     {
-        /**We need to listen to some props that are being passed by our Route ${currentStop}, ${setCurrentStop}, ${stops} and ${setLeftovers}*/
+        /**We need to listen to some props that are being passed by our Route ${stops}, ${setLeftovers} and ${leftovers}*/
     }
 ) {
     //Set the ${on} useState
