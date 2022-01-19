@@ -4,9 +4,9 @@ import React from 'react';
  * 1) Create new Bus component which should have:
  *      -The information regarding the ${on}, number of persons on the bus, (and show it to the user).
  *      -The information regarding the ${cap}, the full capacity of the bus iself (excluding the driver), (and show it to the user).
- *      -Four received props, the ${currentStop}, the function to update the currentStop ${setCurrentStop}, the array of stops ${stops} and a function that will update the number of passengers left on each bus stop #{setLeftovers}.
- *      -A function that will look at the ${stops} position of the array given the ${currentStop} and check if given the ${on} and ${cap} how many can you fit on the bus and how many are leftovers (and set the leftovers ${setLeftovers}).
- *      -A useEffect that for each change on the ${currentStop} will call the function.
+ *      -Three received props, the array of stops ${stops}, a function that will update the number of passengers left on each bus stop #{setLeftovers} and the ${leftovers} themselves.
+ *      -A function that will look at the ${stops} last element and check if given the ${on} and ${cap} how many can you fit on the bus and how many are leftovers (and set the leftovers ${setLeftovers}).
+ *      -A useEffect that for each change on the ${stops} will call the function.
  */
 export default function Bus(
     {
@@ -16,9 +16,10 @@ export default function Bus(
     //Set the ${on} useState
     //Set the ${cap} useState
 
-    //useEffect that will be dispatched when the currentStop changes
-    //the function which will check how many will be added to the bus and how many are going to be leftovers
-    //BONUS EXERCISE: Also usually some passengers get out of the bus at each stop, lets make it random between 1 and 3
+    //useEffect that will be dispatched when the stops changes
 
-    return <>{/*Render the current number of people on the bus, the capacity of the bus, and how many were leftovers*/}</>;
+    //the function which will check how many will be added to the bus and how many are going to be leftovers
+    function canBoard(passengersWaiting) {}
+
+    return <>{/*Render the current stop, how many people were in each stop, how many people are on the bus, the capacity of the bus, and how many were leftovers*/}</>;
 }
